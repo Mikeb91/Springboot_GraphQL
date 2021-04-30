@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: Informa-GraphQLServer
+
+server:  http2:    enabled: true
+    
+graphql:
+  servlet:
+    max-query-depth: 100
+    exception-handlers-enabled: false #se pone en true si quermeos manejar el handler por defecto de spring-graphQL
+  playground:
+    headers:      Authorization: Bearer TOKEN
+    tabs:
+      - name: Bank account sample query
+        query: classpath:playground/bank_account.graphql
+        variables: classpath:playground/bank_account_variables.json
+    ##enabled: false - Para entorno de producción para que no quede habilitado.  
+voyager:
+  enabled: true
