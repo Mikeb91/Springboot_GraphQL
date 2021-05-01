@@ -31,8 +31,6 @@ public class ClientResolver implements GraphQLResolver<BankAccount>{  //Este es 
 					Runtime.getRuntime().availableProcessors()
 				);
 		
-		log.info("Stop here");
-		
 		return CompletableFuture.supplyAsync(
 				() -> {
 					log.info("Requesting client data for bank account id {}", bankAccount.getId());

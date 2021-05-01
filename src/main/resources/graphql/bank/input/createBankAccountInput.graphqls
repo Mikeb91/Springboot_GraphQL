@@ -1,0 +1,4 @@
+# If information goes to the server it must be an input type mandatory. 
+input CreateBankAccountInput {
+	firstName: String!
+}

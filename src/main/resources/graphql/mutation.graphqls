@@ -1,0 +1,9 @@
+# All mutations available in grahpQL
+type Mutation {
+
+	#Create a bank account
+	createBankAccount(input: CreateBankAccountInput) : BankAccount!
+	#Upload a File
+	uploadFile: ID!
+	
+}
